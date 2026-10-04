@@ -1,0 +1,30 @@
+VITAL PHASE 5 — CAMERA MICROPHONE + RELIABLE PUSH-TO-TALK
+
+WHAT CHANGED
+1. A visible microphone button now appears inside the live camera frame.
+2. Tap once to record. Speak. Tap again to stop and send.
+3. VITAL transcribes the recording through Gemini and replies aloud.
+4. Saying “Hi VITAL” receives a friendly spoken greeting.
+5. Voice descriptions are copied automatically into the equipment-problem field.
+6. The floating VITAL voice orb was rebuilt to use the same push-to-talk system.
+7. The unstable Gemini Live WebSocket is no longer required for normal voice use.
+8. If GEMINI_MODEL is invalid, the server automatically retries gemini-2.5-flash.
+
+RUN
+npm install
+npm run dev
+
+TEST
+1. Open the localhost URL in Chrome.
+2. Start Inspection and open the live camera.
+3. Tap the microphone shown inside the camera.
+4. Allow microphone permission.
+5. Say “Hi VITAL”.
+6. Tap the red microphone again.
+7. Wait for VITAL to reply aloud.
+
+IMPORTANT
+- Use localhost or HTTPS.
+- Allow Camera, Microphone and Sound in Chrome site settings.
+- Keep voice recordings under 12 seconds.
+- Do not double-click index.html.

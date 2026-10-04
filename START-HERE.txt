@@ -1,0 +1,30 @@
+VITAL — CAMERA MICROPHONE + PUSH-TO-TALK VOICE
+================================================
+
+This build replaces the unstable continuous-live voice experiment with a simpler and more reliable flow:
+
+Tap microphone → speak → tap again → VITAL understands → VITAL replies aloud.
+
+The microphone is visible INSIDE the live camera frame and also remains available as the floating orb across the website.
+
+SETUP
+1. Open Terminal inside this folder.
+2. Paste:
+
+   read -s "GEMINI_KEY?Paste Gemini API key: "; echo
+   printf "GEMINI_API_KEY=%s\nGEMINI_MODEL=gemini-2.5-flash\n" "$GEMINI_KEY" > .env
+   unset GEMINI_KEY
+   npm install
+   npm run dev
+
+3. Open the localhost URL in Google Chrome.
+4. Start an inspection and open the live camera.
+5. Tap the microphone visible inside the camera.
+6. Allow microphone permission.
+7. Say “Hi VITAL”.
+8. Tap the red microphone again.
+9. VITAL will show what it heard and reply aloud.
+
+The same microphone can also accept an equipment description. The transcript is added automatically to the problem field.
+
+Never paste your API key into source files or into chat.
