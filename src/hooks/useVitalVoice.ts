@@ -228,7 +228,7 @@ export function useVitalVoice({
   }
 
   const startBrowserTranscript = () => {
-    const speechWindow = window as typeof window & {
+    const speechWindow = window as unknown as {
       SpeechRecognition?: SpeechRecognitionConstructor
       webkitSpeechRecognition?: SpeechRecognitionConstructor
     }
